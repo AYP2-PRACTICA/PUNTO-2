@@ -30,3 +30,8 @@ nodo * crearLista()
    cout<<"escriba numero de veces que desea aplicar la serie fibonacci":
     cin>>n;
     cout<<"escriba los 2 numeros que desea para la serie Fibonacci";cin>>info1>>info2;
+    
+    acum=info2+info1
+    info2=acum					//esto va antesde insertar final
+    info1=info2
+    
