@@ -23,7 +23,7 @@ struct nodo *crearlis()
 	lista=NULL;
 	return lista;
 }
-struct nodo *insertarinicio (struct nodo *lista,int valor)
+struct nodo *insertarinicio (struct nodo *lista,struct estudiante *valor)
 {
 	
 	struct nodo *q;
@@ -35,7 +35,7 @@ struct nodo *insertarinicio (struct nodo *lista,int valor)
 }
 struct nodo *insertardesdeArchivo(struct nodo *lista)
 {
-	int infoArc;
+	struct estudiante infoArc;
 	ifstream archivo;
 	archivo.open("archivo lista.txt");
 	if (archivo.is_open())
