@@ -17,6 +17,16 @@ struct nodo *crearlis()
 	lista=NULL;
 	return lista;
 }
+struct nodo *insertarinicio (struct nodo *lista,int valor)
+{
+	
+	struct nodo *q;
+	q=new(struct nodo);
+	q->info=valor;
+	q->sgte=lista;	
+	lista=q;
+	return lista;
+}
 struct nodo *insertardesdeArchivo(struct nodo *lista)
 {
 	int infoArc;
