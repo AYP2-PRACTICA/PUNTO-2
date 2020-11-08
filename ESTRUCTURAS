@@ -7,8 +7,8 @@ using namespace std;
 
 struct estudiante
 {
-	char nom [30];
-	char apell [30];
+	string nom;
+	string apell;
 }
 struct nodo
 {
@@ -95,29 +95,35 @@ struct nodo *convertirlistadoble (struct nodo *lista)
 	return cabeza;
 }
 
-void ordenarEstudiantes(struct nodo *lista, int tam)
+void ordenarEstudiantes(struct nodo *lista)
 {
-								    int j, k, salto;
-								    Estudiante aux;
+	int j,k, salto, tam;
+	estudiante *aux;
+	tam=strlen(aux->apell)						
+	salto = tam / 2;
+	while(salto > 0)
+	{
+		for(int i = salto; i < tam; i++)
+		{
+			j = i - salto;
 
-								    salto = tam / 2;
+			while(j >= 0)
+			{
+				k = j + salto;
 
-								    while(salto > 0){
-									for(int i = salto; i < tam; i++){
-									    j = i - salto;
-
-									    while(j >= 0){
-										k = j + salto;
-
-										if(strcmp(e[j].apellido, e[k].apellido) < 0){
-										    j = -1;
-										}else{
-										    aux = e[j];
-										    e[k] = e[j];
-										    e[k] = aux;
-										}
-									    }           
-									}
-									salto = salto / 2;
-								    }
+				if(strcmp(e[j].apellido, e[k].apellido) < 0)
+				{
+					j = -1;
+				}
+				else
+				{
+					aux = e[j];
+					e[k] = e[j];
+					e[k] = aux;
+				}
+			}           
+		}
+		salto = salto / 2;
+	}
 }
+								  
