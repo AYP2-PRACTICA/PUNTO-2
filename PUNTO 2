@@ -1,0 +1,23 @@
+struct nodo *insertardesdeArchivo(struct nodo *lista)
+{
+	int infoArc;
+	ifstream archivo;
+	archivo.open("archivo lista.txt");
+	if (archivo.is_open())
+	{
+	//	lista=crearlis();
+		while(!archivo.eof())
+		{
+			archivo>>infoArc;
+			lista=insertarinicio(lista,infoArc);
+		}
+		archivo.close();
+	}
+	else
+	{
+		cout<<"********   Archivo no encontrado   ******"<<endl;
+	}
+	return lista;
+}
+
+
