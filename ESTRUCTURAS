@@ -48,3 +48,71 @@ struct nodo *insertardesdeArchivo(struct nodo *lista)
 	}
 	return lista;
 }
+
+struct nodo *mostrarlista (struct nodo *cabeza)
+{
+	int i=1;
+	struct nodo *p;
+	
+	p=cabeza->sgte;
+	
+	cout<<" IMPRESION DE LA LISTA"<<endl;
+	
+	while(p!=NULL)
+	{
+		cout<< ' '<<i<<")"<<p->info.cc<<"\t"<<p->info.nom<<"\t"<<p->info.nota<<endl;
+		p=p->sgte;
+		i++;
+	}
+	system("pause");
+	
+}
+
+
+struct nodo *convertirlistadoble (struct nodo *lista)
+{
+	struct nodo *p,*q;
+	struct nodo *cabeza;
+	cabeza=new(struct nodo);
+	p=lista;
+	cabeza->sgte=p;
+	cabeza->ant=NULL;
+	p->ant=cabeza;
+	q=lista;
+	while (p!=NULL)
+	{
+		p=p->sgte;
+		p->ant=q->sgte;
+		q=q->sgte;
+	}
+	
+	return cabeza;
+}
+
+struct nodo *ordenar_nombre (struct nodo *lista)
+void ordenarEstudiantes(struct nodo *e, int tam)
+{
+    int j, k, salto;
+    Estudiante aux;
+
+    salto = tam / 2;
+
+    while(salto > 0){
+        for(int i = salto; i < tam; i++){
+            j = i - salto;
+
+            while(j >= 0){
+                k = j + salto;
+
+                if(strcmp(e[j].apellido, e[k].apellido) < 0){
+                    j = -1;
+                }else{
+                    aux = e[j];
+                    e[k] = e[j];
+                    e[k] = aux;
+                }
+            }           
+        }
+        salto = salto / 2;
+    }
+}
