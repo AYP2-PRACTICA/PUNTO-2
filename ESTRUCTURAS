@@ -4,9 +4,15 @@
 
 using namespace std;
 
+
+struct estudiante
+{
+	char nom [30];
+	char apell [30];
+}
 struct nodo
 {
-	string info;
+	struct estudiante info;
 	struct nodo *sgte;
 	struct nodo *ante;
 };
@@ -89,30 +95,29 @@ struct nodo *convertirlistadoble (struct nodo *lista)
 	return cabeza;
 }
 
-struct nodo *ordenar_nombre (struct nodo *lista)
-void ordenarEstudiantes(struct nodo *e, int tam)
+void ordenarEstudiantes(struct nodo *lista, int tam)
 {
-    int j, k, salto;
-    Estudiante aux;
+								    int j, k, salto;
+								    Estudiante aux;
 
-    salto = tam / 2;
+								    salto = tam / 2;
 
-    while(salto > 0){
-        for(int i = salto; i < tam; i++){
-            j = i - salto;
+								    while(salto > 0){
+									for(int i = salto; i < tam; i++){
+									    j = i - salto;
 
-            while(j >= 0){
-                k = j + salto;
+									    while(j >= 0){
+										k = j + salto;
 
-                if(strcmp(e[j].apellido, e[k].apellido) < 0){
-                    j = -1;
-                }else{
-                    aux = e[j];
-                    e[k] = e[j];
-                    e[k] = aux;
-                }
-            }           
-        }
-        salto = salto / 2;
-    }
+										if(strcmp(e[j].apellido, e[k].apellido) < 0){
+										    j = -1;
+										}else{
+										    aux = e[j];
+										    e[k] = e[j];
+										    e[k] = aux;
+										}
+									    }           
+									}
+									salto = salto / 2;
+								    }
 }
