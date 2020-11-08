@@ -14,20 +14,19 @@ nodo * crearLista()
    	cabeza = new(struct nodo);
     	cabeza->sgte=NULL;
     	cabeza->ante=NULL;
-    	cout<<"escriba los 2 numeros que desea para la serie Fibonacci";cin>>info1>>info2;
-    	return cabeza;
-    
-    cout<<"escriba numero de veces que desea aplicar la serie fibonacci":
-    cin>>n;
-    
-    for(i=0;i<n;i++)
+    	return cabeza;   
+ }
+ struct nodo *insertarfinal
+ {
+ 	
+ }
+     for(i=0;i<n;i++)
     {
     
     
     
      }
      
-     
- }
-   
-    
+   cout<<"escriba numero de veces que desea aplicar la serie fibonacci":
+    cin>>n;
+    cout<<"escriba los 2 numeros que desea para la serie Fibonacci";cin>>info1>>info2;
