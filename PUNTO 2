@@ -1,3 +1,22 @@
+#include<string.h>
+#include<iostream>
+#include<fstream>
+
+using namespace std;
+
+struct nodo
+{
+	string info;
+	struct nodo *sgte;
+	struct nodo *ante;
+};
+
+struct nodo *crearlis()
+{
+	struct nodo *lista;
+	lista=NULL;
+	return lista;
+}
 struct nodo *insertardesdeArchivo(struct nodo *lista)
 {
 	int infoArc;
@@ -19,5 +38,3 @@ struct nodo *insertardesdeArchivo(struct nodo *lista)
 	}
 	return lista;
 }
-
-
