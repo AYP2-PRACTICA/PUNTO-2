@@ -16,22 +16,37 @@ nodo * crearLista()
     	cabeza->ante=NULL;
     	return cabeza;   
  }
- struct nodo *insertarfinal
- {
- 	
- }
+
+ cout<<"escriba numero de veces que desea aplicar la serie fibonacci":
+ cin>>n;
+ cout<<"escriba los 2 numeros que desea para la serie Fibonacci";cin>>info1>>info2;	
+ 
      for(i=0;i<n;i++)
     {
-    
+    	acum=info1+finfo2
+	info1=info2
+	info2=acum
+	insertarFinal(cabeza,acum);
     
     
      }
-     
-   cout<<"escriba numero de veces que desea aplicar la serie fibonacci":
-    cin>>n;
-    cout<<"escriba los 2 numeros que desea para la serie Fibonacci";cin>>info1>>info2;
+void insertarFinal(nodo *cabeza, int valor)
+{
+	nodo *t, *q;
+    cout<< "Entrada a insertar "<<valor;
+	
+	q = new(struct nodo);
+    q->info  = valor;
+    q->sgte = NULL;
+    q->ante = NULL;
     
-    acum=info2+info1
-    info2=acum					//esto va antesde insertar final
-    info1=info2
+	t = cabeza;
+	while(t->sgte!=NULL)
+	{
+		t = t->sgte;
+	}
+	t->sgte = q;
+	q->ante=t;
+}
+
     
