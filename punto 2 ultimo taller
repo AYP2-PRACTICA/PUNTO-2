@@ -1,0 +1,144 @@
+#include<iostream>
+#include<string.h>
+
+using namespace std;
+
+
+class cola1
+{
+     private:
+    
+   
+       unsigned short Hora[10] ;
+       unsigned short  min[10];
+       unsigned short  Ss[10];
+       String Nom;
+    public:
+	cola1( ){ };      
+	~cola1( ){ };
+	void registro();
+};
+
+
+
+class cola2{
+
+
+	private:
+		 
+	
+		unsigned short hora1[10];
+		unsigned short min1[10];
+		unsigned short Ss1[10];
+		string Nom1;
+
+	
+	public:
+	cola2(){};
+	~cola2( ){ };
+	void registro1();
+	
+};
+	
+class cola3{
+
+	private:
+		struct informacion2;
+	{
+		unsigned short hora2[20];
+		unsigned short min2[20];
+		unsigned short Ss2[20];
+		string nom2;
+		
+	}
+	
+	public:
+		cola3(){};
+		~cola3( ){ };
+	void llenado();
+	void ordenar();
+};
+
+void cola1::registro()
+{
+	cout<<"escriba su nombre";
+	cin>>Nom;
+	cout<<"escriba la hora a la cual ingreso";
+	cin>>Hora;
+	cout<<"escriba el minuto a la cual ingreso";
+	cin>>min;
+	cout<<"escriba el segundo a la cual ingreso";
+	cin>>Ss;
+}
+
+void cola2::registro1()
+{
+	cout<<"escriba su nombre"
+	cin>>Nom1;
+	cout<<"escriba la hora a la cual ingreso";
+	cin>>Hora1;
+	cout<<"escriba el minuto a la cual ingreso";
+	cin>>min1;
+	cout<<"escriba el segundo a la cual ingreso";
+	cin>>Ss1;
+}
+
+void cola3::llenado()
+{
+int i,x;
+
+	for(i=0;i<10;i++)
+	{
+	
+	hora2[i]=hora[i];
+	min2[i]=min[i];
+	ss2[i]=ss[i];
+	nom2[i]=nom2[i];
+	
+	}
+	for(x=0;x<10;x++)
+	{
+		hora2[x+10]=hora1[x]
+		min2[x+10]=min1[x]
+		ss2[x+10]=ss1[x]
+		nom2[x+10]=nom1[x]
+		
+	}
+}
+
+void cola3::ordenar()
+{
+	int a,b;
+	unsigned short aux1,aux2,aux3,aux4;
+	string aux4;
+	for (a=0;a<20;a++)
+	{
+		for(b=0;b<20;b++)
+		{
+		if(hora2[b]=>hora2[b+1])
+		{
+			if(min2[b]=>min2[b+1])
+			{
+				if(ss2[b]>ss2[b+1])
+				{
+					aux1=hora2[b+1];
+					aux2=min2[b+1];
+					aux3=ss2[b+1];
+					aux4=nom2[b+1];
+					hora2[b+1]=hora2[b];
+					min2[b+1]=min2[b];
+					ss2[b+1]=min2[b];
+					nom2[b+1]=nom2[b];
+					hora2[b]=aux1;
+					min2[b]=aux2;
+					ss2[b]=aux3;
+					nom2[b]=aux4;
+				}
+			
+					
+			}
+			
+		}
+}
+}
+}
