@@ -1,0 +1,46 @@
+#include<iostream>
+
+using namespace std;
+int div=1,MCM=1,a,n1,n2;
+int Maximo_comun_divisor(int,int,int,int);
+
+
+int main()
+{
+
+cout<<"escriba el primer numero que desea saber el Maximo comun divisor";
+cin>>n1;
+cout<<"escriba el segundo numero que desea saber el maximo comun divisor";
+cin>>n2;
+
+a=Maximo_comun_divisor(n1,n2,MCM,div);
+
+cout<<"el maximo comun divisor entre el numero"<<n1<<"y el numero"<<n2<<"es"<<a;
+}
+
+int Maximo_comun_divisior(int n1,int n2,int MCM,int div)
+{	
+	int NM;
+	
+	if(n1<n2)
+	{
+		NM=n1;
+	}
+		else
+		{
+			NM=n2;
+		}		
+			
+     if(NM%div==0)
+	{
+	Maximo_comun_divisor(n1,n2,MCM+1,(div+1));
+	}
+	else if(NM%div!=0)
+	{
+	Maximo_comun_divisor(n1,n2,MCM,(div+1));
+	}	
+	else
+	{
+	return MCM;
+	}			
+}
